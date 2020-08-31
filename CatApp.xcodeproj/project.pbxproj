@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,27 @@
 		04F4D2AE24FD898300F42B80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F4D2AC24FD898300F42B80 /* LaunchScreen.storyboard */; };
 		04F4D2B924FD898300F42B80 /* CatAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D2B824FD898300F42B80 /* CatAppTests.swift */; };
 		04F4D2C424FD898300F42B80 /* CatAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D2C324FD898300F42B80 /* CatAppUITests.swift */; };
+		04F4D2D624FD90A100F42B80 /* BreedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D2D524FD90A100F42B80 /* BreedsViewController.swift */; };
+		04F4D2D824FD918700F42B80 /* BreedRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D2D724FD918700F42B80 /* BreedRes.swift */; };
+		04F4D2DB24FD928900F42B80 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D2DA24FD928900F42B80 /* Extensions.swift */; };
+		04F4D2DF24FD92BA00F42B80 /* ApiAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D2DE24FD92BA00F42B80 /* ApiAdapter.swift */; };
+		04F4D2E124FD92F500F42B80 /* CatsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D2E024FD92F500F42B80 /* CatsApi.swift */; };
+		04F4D2E324FD933F00F42B80 /* CatsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D2E224FD933F00F42B80 /* CatsService.swift */; };
+		04F4D2E524FD958100F42B80 /* CatsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D2E424FD958100F42B80 /* CatsManager.swift */; };
+		04F4D2E724FD97FC00F42B80 /* BreedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D2E624FD97FC00F42B80 /* BreedsViewModel.swift */; };
+		04F4D2EB24FD99C900F42B80 /* BreedsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D2E924FD99C900F42B80 /* BreedsTableViewCell.swift */; };
+		04F4D2EC24FD99C900F42B80 /* BreedsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F4D2EA24FD99C900F42B80 /* BreedsTableViewCell.xib */; };
+		04F4D2EE24FDA24900F42B80 /* ImageBreedRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D2ED24FDA24900F42B80 /* ImageBreedRes.swift */; };
+		04F4D2F024FDA37900F42B80 /* BreedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D2EF24FDA37900F42B80 /* BreedDetailViewModel.swift */; };
+		04F4D2F324FDA44D00F42B80 /* BreedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D2F124FDA44D00F42B80 /* BreedDetailViewController.swift */; };
+		04F4D2F424FDA44D00F42B80 /* BreedDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F4D2F224FDA44D00F42B80 /* BreedDetailViewController.xib */; };
+		04F4D2FF24FDB24600F42B80 /* CatsDetailInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D2FD24FDB24600F42B80 /* CatsDetailInfoTableViewCell.swift */; };
+		04F4D30024FDB24600F42B80 /* CatsDetailInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F4D2FE24FDB24600F42B80 /* CatsDetailInfoTableViewCell.xib */; };
+		04F4D30424FDBDD200F42B80 /* WebInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D30224FDBDD200F42B80 /* WebInfoViewController.swift */; };
+		04F4D30524FDBDD200F42B80 /* WebInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F4D30324FDBDD200F42B80 /* WebInfoViewController.xib */; };
+		3D45BB305A00F071C605E654 /* Pods_CatAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE187A500833438DC6926D7A /* Pods_CatAppTests.framework */; };
+		77A4CFA629C249FF980212E3 /* Pods_CatApp_CatAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9E0978CADEF5681ACEFCBF /* Pods_CatApp_CatAppUITests.framework */; };
+		9E9D28A7C2C2CC74157F6F70 /* Pods_CatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3359C45C8D6658B126C6276B /* Pods_CatApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +72,33 @@
 		04F4D2BF24FD898300F42B80 /* CatAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F4D2C324FD898300F42B80 /* CatAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAppUITests.swift; sourceTree = "<group>"; };
 		04F4D2C524FD898300F42B80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04F4D2D524FD90A100F42B80 /* BreedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewController.swift; sourceTree = "<group>"; };
+		04F4D2D724FD918700F42B80 /* BreedRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedRes.swift; sourceTree = "<group>"; };
+		04F4D2DA24FD928900F42B80 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		04F4D2DE24FD92BA00F42B80 /* ApiAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiAdapter.swift; sourceTree = "<group>"; };
+		04F4D2E024FD92F500F42B80 /* CatsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsApi.swift; sourceTree = "<group>"; };
+		04F4D2E224FD933F00F42B80 /* CatsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsService.swift; sourceTree = "<group>"; };
+		04F4D2E424FD958100F42B80 /* CatsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsManager.swift; sourceTree = "<group>"; };
+		04F4D2E624FD97FC00F42B80 /* BreedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewModel.swift; sourceTree = "<group>"; };
+		04F4D2E924FD99C900F42B80 /* BreedsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsTableViewCell.swift; sourceTree = "<group>"; };
+		04F4D2EA24FD99C900F42B80 /* BreedsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedsTableViewCell.xib; sourceTree = "<group>"; };
+		04F4D2ED24FDA24900F42B80 /* ImageBreedRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBreedRes.swift; sourceTree = "<group>"; };
+		04F4D2EF24FDA37900F42B80 /* BreedDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewModel.swift; sourceTree = "<group>"; };
+		04F4D2F124FDA44D00F42B80 /* BreedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewController.swift; sourceTree = "<group>"; };
+		04F4D2F224FDA44D00F42B80 /* BreedDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedDetailViewController.xib; sourceTree = "<group>"; };
+		04F4D2FD24FDB24600F42B80 /* CatsDetailInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsDetailInfoTableViewCell.swift; sourceTree = "<group>"; };
+		04F4D2FE24FDB24600F42B80 /* CatsDetailInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatsDetailInfoTableViewCell.xib; sourceTree = "<group>"; };
+		04F4D30224FDBDD200F42B80 /* WebInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebInfoViewController.swift; sourceTree = "<group>"; };
+		04F4D30324FDBDD200F42B80 /* WebInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebInfoViewController.xib; sourceTree = "<group>"; };
+		3359C45C8D6658B126C6276B /* Pods_CatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3908FAE1F6CAFA3C095ABC98 /* Pods-CatApp-CatAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatApp-CatAppUITests.release.xcconfig"; path = "Target Support Files/Pods-CatApp-CatAppUITests/Pods-CatApp-CatAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		90D576FD6EE3A4F254E560BC /* Pods-CatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatApp.debug.xcconfig"; path = "Target Support Files/Pods-CatApp/Pods-CatApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B4863B24EA3E84655EB37735 /* Pods-CatAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatAppTests.debug.xcconfig"; path = "Target Support Files/Pods-CatAppTests/Pods-CatAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA9E0978CADEF5681ACEFCBF /* Pods_CatApp_CatAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatApp_CatAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBDF4A2DEEF34AF7BC2F1664 /* Pods-CatAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatAppTests.release.xcconfig"; path = "Target Support Files/Pods-CatAppTests/Pods-CatAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		D158A81834CBE5465F13260C /* Pods-CatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatApp.release.xcconfig"; path = "Target Support Files/Pods-CatApp/Pods-CatApp.release.xcconfig"; sourceTree = "<group>"; };
+		DD08A7EBFE2D69A856B95E51 /* Pods-CatApp-CatAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatApp-CatAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-CatApp-CatAppUITests/Pods-CatApp-CatAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE187A500833438DC6926D7A /* Pods_CatAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9D28A7C2C2CC74157F6F70 /* Pods_CatApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D45BB305A00F071C605E654 /* Pods_CatAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77A4CFA629C249FF980212E3 /* Pods_CatApp_CatAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +136,8 @@
 				04F4D2B724FD898300F42B80 /* CatAppTests */,
 				04F4D2C224FD898300F42B80 /* CatAppUITests */,
 				04F4D29C24FD897B00F42B80 /* Products */,
+				20E61AEC29213BE6E0613023 /* Pods */,
+				4521FCEB6D6914AD7A7DE067 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +154,13 @@
 		04F4D29D24FD897B00F42B80 /* CatApp */ = {
 			isa = PBXGroup;
 			children = (
+				04F4D2DD24FD929D00F42B80 /* Services */,
+				04F4D2DC24FD929400F42B80 /* Managers */,
+				04F4D2D924FD928000F42B80 /* Extensions */,
+				04F4D2D424FD8E0A00F42B80 /* Network */,
+				04F4D2D324FD8E0400F42B80 /* Models */,
+				04F4D2D224FD8DFC00F42B80 /* ViewModels */,
+				04F4D2D124FD8DF800F42B80 /* Views */,
 				04F4D29E24FD897B00F42B80 /* AppDelegate.swift */,
 				04F4D2A024FD897B00F42B80 /* SceneDelegate.swift */,
 				04F4D2A224FD897B00F42B80 /* ViewController.swift */,
@@ -131,6 +191,144 @@
 			path = CatAppUITests;
 			sourceTree = "<group>";
 		};
+		04F4D2D124FD8DF800F42B80 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04F4D30124FDBDA300F42B80 /* WebInfoController */,
+				04F4D2F624FDA46200F42B80 /* BreedsListController */,
+				04F4D2F524FDA45300F42B80 /* BreedDetailViewController */,
+				04F4D2E824FD998900F42B80 /* TableViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04F4D2D224FD8DFC00F42B80 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				04F4D2E624FD97FC00F42B80 /* BreedsViewModel.swift */,
+				04F4D2EF24FDA37900F42B80 /* BreedDetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		04F4D2D324FD8E0400F42B80 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04F4D2D724FD918700F42B80 /* BreedRes.swift */,
+				04F4D2ED24FDA24900F42B80 /* ImageBreedRes.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04F4D2D424FD8E0A00F42B80 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				04F4D2DE24FD92BA00F42B80 /* ApiAdapter.swift */,
+				04F4D2E024FD92F500F42B80 /* CatsApi.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		04F4D2D924FD928000F42B80 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04F4D2DA24FD928900F42B80 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		04F4D2DC24FD929400F42B80 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				04F4D2E424FD958100F42B80 /* CatsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		04F4D2DD24FD929D00F42B80 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				04F4D2E224FD933F00F42B80 /* CatsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		04F4D2E824FD998900F42B80 /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				04F4D2F824FDA6D100F42B80 /* CatsDetailInfoCell */,
+				04F4D2F724FDA6BA00F42B80 /* BreedsCell */,
+			);
+			path = TableViews;
+			sourceTree = "<group>";
+		};
+		04F4D2F524FDA45300F42B80 /* BreedDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04F4D2F124FDA44D00F42B80 /* BreedDetailViewController.swift */,
+				04F4D2F224FDA44D00F42B80 /* BreedDetailViewController.xib */,
+			);
+			path = BreedDetailViewController;
+			sourceTree = "<group>";
+		};
+		04F4D2F624FDA46200F42B80 /* BreedsListController */ = {
+			isa = PBXGroup;
+			children = (
+				04F4D2D524FD90A100F42B80 /* BreedsViewController.swift */,
+			);
+			path = BreedsListController;
+			sourceTree = "<group>";
+		};
+		04F4D2F724FDA6BA00F42B80 /* BreedsCell */ = {
+			isa = PBXGroup;
+			children = (
+				04F4D2E924FD99C900F42B80 /* BreedsTableViewCell.swift */,
+				04F4D2EA24FD99C900F42B80 /* BreedsTableViewCell.xib */,
+			);
+			path = BreedsCell;
+			sourceTree = "<group>";
+		};
+		04F4D2F824FDA6D100F42B80 /* CatsDetailInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				04F4D2FD24FDB24600F42B80 /* CatsDetailInfoTableViewCell.swift */,
+				04F4D2FE24FDB24600F42B80 /* CatsDetailInfoTableViewCell.xib */,
+			);
+			path = CatsDetailInfoCell;
+			sourceTree = "<group>";
+		};
+		04F4D30124FDBDA300F42B80 /* WebInfoController */ = {
+			isa = PBXGroup;
+			children = (
+				04F4D30224FDBDD200F42B80 /* WebInfoViewController.swift */,
+				04F4D30324FDBDD200F42B80 /* WebInfoViewController.xib */,
+			);
+			path = WebInfoController;
+			sourceTree = "<group>";
+		};
+		20E61AEC29213BE6E0613023 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90D576FD6EE3A4F254E560BC /* Pods-CatApp.debug.xcconfig */,
+				D158A81834CBE5465F13260C /* Pods-CatApp.release.xcconfig */,
+				DD08A7EBFE2D69A856B95E51 /* Pods-CatApp-CatAppUITests.debug.xcconfig */,
+				3908FAE1F6CAFA3C095ABC98 /* Pods-CatApp-CatAppUITests.release.xcconfig */,
+				B4863B24EA3E84655EB37735 /* Pods-CatAppTests.debug.xcconfig */,
+				CBDF4A2DEEF34AF7BC2F1664 /* Pods-CatAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4521FCEB6D6914AD7A7DE067 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3359C45C8D6658B126C6276B /* Pods_CatApp.framework */,
+				BA9E0978CADEF5681ACEFCBF /* Pods_CatApp_CatAppUITests.framework */,
+				DE187A500833438DC6926D7A /* Pods_CatAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +336,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04F4D2C824FD898300F42B80 /* Build configuration list for PBXNativeTarget "CatApp" */;
 			buildPhases = (
+				2039D75203234AC6A212081F /* [CP] Check Pods Manifest.lock */,
 				04F4D29724FD897B00F42B80 /* Sources */,
 				04F4D29824FD897B00F42B80 /* Frameworks */,
 				04F4D29924FD897B00F42B80 /* Resources */,
+				8CD5A05820CFE3AC4B4D7155 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +355,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04F4D2CB24FD898300F42B80 /* Build configuration list for PBXNativeTarget "CatAppTests" */;
 			buildPhases = (
+				DB0A6186C03937E194AB1CF1 /* [CP] Check Pods Manifest.lock */,
 				04F4D2B024FD898300F42B80 /* Sources */,
 				04F4D2B124FD898300F42B80 /* Frameworks */,
 				04F4D2B224FD898300F42B80 /* Resources */,
@@ -173,9 +374,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04F4D2CE24FD898300F42B80 /* Build configuration list for PBXNativeTarget "CatAppUITests" */;
 			buildPhases = (
+				34C6DAD7212ED6BE0664494C /* [CP] Check Pods Manifest.lock */,
 				04F4D2BB24FD898300F42B80 /* Sources */,
 				04F4D2BC24FD898300F42B80 /* Frameworks */,
 				04F4D2BD24FD898300F42B80 /* Resources */,
+				88D232D6F0329CEE22D7DE1B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,9 +438,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F4D2EC24FD99C900F42B80 /* BreedsTableViewCell.xib in Resources */,
 				04F4D2AE24FD898300F42B80 /* LaunchScreen.storyboard in Resources */,
+				04F4D2F424FDA44D00F42B80 /* BreedDetailViewController.xib in Resources */,
 				04F4D2AB24FD898300F42B80 /* Assets.xcassets in Resources */,
+				04F4D30524FDBDD200F42B80 /* WebInfoViewController.xib in Resources */,
 				04F4D2A624FD897B00F42B80 /* Main.storyboard in Resources */,
+				04F4D30024FDB24600F42B80 /* CatsDetailInfoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,15 +464,132 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2039D75203234AC6A212081F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34C6DAD7212ED6BE0664494C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatApp-CatAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88D232D6F0329CEE22D7DE1B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CatApp-CatAppUITests/Pods-CatApp-CatAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CatApp-CatAppUITests/Pods-CatApp-CatAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CatApp-CatAppUITests/Pods-CatApp-CatAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CD5A05820CFE3AC4B4D7155 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CatApp/Pods-CatApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CatApp/Pods-CatApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CatApp/Pods-CatApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB0A6186C03937E194AB1CF1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04F4D29724FD897B00F42B80 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F4D2D624FD90A100F42B80 /* BreedsViewController.swift in Sources */,
 				04F4D2A924FD897B00F42B80 /* CatApp.xcdatamodeld in Sources */,
+				04F4D2E524FD958100F42B80 /* CatsManager.swift in Sources */,
+				04F4D2E324FD933F00F42B80 /* CatsService.swift in Sources */,
 				04F4D2A324FD897B00F42B80 /* ViewController.swift in Sources */,
+				04F4D2E724FD97FC00F42B80 /* BreedsViewModel.swift in Sources */,
+				04F4D2EB24FD99C900F42B80 /* BreedsTableViewCell.swift in Sources */,
+				04F4D2EE24FDA24900F42B80 /* ImageBreedRes.swift in Sources */,
+				04F4D2D824FD918700F42B80 /* BreedRes.swift in Sources */,
+				04F4D2F024FDA37900F42B80 /* BreedDetailViewModel.swift in Sources */,
 				04F4D29F24FD897B00F42B80 /* AppDelegate.swift in Sources */,
 				04F4D2A124FD897B00F42B80 /* SceneDelegate.swift in Sources */,
+				04F4D2DF24FD92BA00F42B80 /* ApiAdapter.swift in Sources */,
+				04F4D2FF24FDB24600F42B80 /* CatsDetailInfoTableViewCell.swift in Sources */,
+				04F4D2DB24FD928900F42B80 /* Extensions.swift in Sources */,
+				04F4D30424FDBDD200F42B80 /* WebInfoViewController.swift in Sources */,
+				04F4D2F324FDA44D00F42B80 /* BreedDetailViewController.swift in Sources */,
+				04F4D2E124FD92F500F42B80 /* CatsApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +760,7 @@
 		};
 		04F4D2C924FD898300F42B80 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90D576FD6EE3A4F254E560BC /* Pods-CatApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +779,7 @@
 		};
 		04F4D2CA24FD898300F42B80 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D158A81834CBE5465F13260C /* Pods-CatApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -472,6 +798,7 @@
 		};
 		04F4D2CC24FD898300F42B80 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4863B24EA3E84655EB37735 /* Pods-CatAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +821,7 @@
 		};
 		04F4D2CD24FD898300F42B80 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBDF4A2DEEF34AF7BC2F1664 /* Pods-CatAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -516,6 +844,7 @@
 		};
 		04F4D2CF24FD898300F42B80 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD08A7EBFE2D69A856B95E51 /* Pods-CatApp-CatAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -536,6 +865,7 @@
 		};
 		04F4D2D024FD898300F42B80 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3908FAE1F6CAFA3C095ABC98 /* Pods-CatApp-CatAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
