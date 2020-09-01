@@ -83,7 +83,7 @@ extension BreedsViewController : UITableViewDataSource{
         guard let numberLimit = breeds?.count else {return}
         if indexPath.row == numberLimit - 3{
             currentPage = currentPage + 1
-            SVProgressHUD.show()
+      
             viewModel.getBreedsCats(page: currentPage)
         }
     }
