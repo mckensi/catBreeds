@@ -19,5 +19,7 @@ struct CatsApi {
     static let breedUrl = baseUrl + "breeds"
     
     static let imageByBreed = baseUrl + "images/search"
+    
+    static let breedSearchByName = baseUrl + "breeds/search"
 }
 

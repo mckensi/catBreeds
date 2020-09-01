@@ -17,6 +17,10 @@ class CatsManager: NSObject {
         catsService.getCatBreeds(page: page, responseValue: responseValue, onFailure: onFailure)
     }
     
+    func getCatBreedsByName(textSearch: String, responseValue: @escaping ([BreedRes]) -> Void, onFailure: (() -> Void)? = nil){
+           catsService.getCatBreedsByName(textSearch: textSearch, responseValue: responseValue, onFailure: onFailure)
+       }
+    
     func getImageCatBreed(id: String, responseValue: @escaping ([ImageBreedRes]) -> Void, onFailure: (() -> Void)? = nil){
         catsService.getImageCatByBreed(id: id, responseValue: responseValue, onFailure: onFailure)
     }

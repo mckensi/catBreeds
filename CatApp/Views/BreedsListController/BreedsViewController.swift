@@ -11,7 +11,8 @@ import SVProgressHUD
 import NotificationBannerSwift
 
 class BreedsViewController: UIViewController {
-
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     @IBOutlet weak var tableView: UITableView!
     
     private var viewModel = BreedsViewModel()
@@ -20,6 +21,8 @@ class BreedsViewController: UIViewController {
     
     private var currentPage : Int = 0
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTable()
@@ -27,6 +30,7 @@ class BreedsViewController: UIViewController {
         SVProgressHUD.show()
         viewModel.getBreedsCats(page: currentPage)
         // Do any additional setup after loading the view.
+        
     }
     
     private func setUpTable(){
@@ -34,6 +38,11 @@ class BreedsViewController: UIViewController {
         tableView.dataSource = self
         let nibCell = UINib(nibName: "BreedsTableViewCell", bundle: nil)
         tableView.register(nibCell.self, forCellReuseIdentifier: "breedCell")
+    }
+    
+    private func setUpSearchBar(){
+        searchBar.delegate = self
+        searchBar.placeholder = "Search by breed name"
     }
     
     private func initListeners(){
@@ -89,4 +98,23 @@ extension BreedsViewController : UITableViewDataSource{
         }
     }
     
+}
+
+extension BreedsViewController : UISearchBarDelegate{
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.endEditing(true)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+
+    }
 }

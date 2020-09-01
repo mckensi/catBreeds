@@ -36,6 +36,27 @@ class CatsService {
         }
     }
     
+    func getCatBreedsByName(textSearch: String, responseValue: @escaping ([BreedRes]) -> Void,  onFailure: (() -> Void)? = nil){
+        let url = CatsApi.breedUrl
+        
+        let params = [
+            "q": textSearch
+        ]
+        
+        ApiAdapter.get.requestGeneric(url: url, queryParams: params) { (response:  AFDataResponse<[BreedRes]>) in
+            if let statusCode = response.response?.statusCode{
+                switch statusCode {
+                case 200:
+                    if let value = response.value{
+                        responseValue(value)
+                    }
+                default:
+                    onFailure?()
+                }
+            }
+        }
+    }
+    
     
     func getImageCatByBreed(id: String, responseValue: @escaping ([ImageBreedRes]) -> Void,  onFailure: (() -> Void)? = nil){
         let url = CatsApi.imageByBreed
@@ -96,4 +117,6 @@ class CatsService {
              onFailure?()
          }
      }
+    
+
 }
