@@ -24,4 +24,8 @@ class CatsManager: NSObject {
     func getImageCats(page: Int, responseValue: @escaping ([ImageBreedRes]) -> Void, onFailure: (() -> Void)? = nil){
         catsService.getImageCats(page: page, responseValue: responseValue, onFailure: onFailure)
     }
+    
+    func addNewVote(id: String, urlImage: String, voteLike: Bool, responseValue: @escaping () -> Void, onFailure: (() -> Void)? = nil){
+        catsService.addCatVote(id: id, url: urlImage, voteLike: voteLike, responseValue: responseValue, onFailure: onFailure)
+    }
 }

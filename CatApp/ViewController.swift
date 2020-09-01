@@ -14,6 +14,7 @@ import SVProgressHUD
 class ViewController: UIViewController {
     
     private var imageCats : [String]?
+    private var imageCatsRes : [ImageBreedRes]?
     private var viewModel = CatsViewModel()
     
     @IBOutlet weak var kolodaView: KolodaView!
@@ -34,6 +35,7 @@ class ViewController: UIViewController {
     private func initListener(){
         viewModel.imagesCatsRes = { [weak self] response in
             guard let strongSelf = self else {return}
+            strongSelf.imageCatsRes = response
             if response.count > 0 {
                 var images = [String]()
                 for res in response{
@@ -46,6 +48,10 @@ class ViewController: UIViewController {
                     SVProgressHUD.dismiss()
                 }
             }
+        }
+        
+        viewModel.addVote = {
+            print("Voto guardado")
         }
         
         viewModel.onFailure = {
@@ -64,11 +70,14 @@ extension ViewController: KolodaViewDelegate {
     }
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
+        guard let image = imageCatsRes?[index] else{return}
         switch direction {
         case .left:
             print("no me gusta")
+            viewModel.addVoteLike(id: image.id ?? "", urlImage: image.url ?? "", voteLike: false)
         case .right:
             print("me gusta")
+            viewModel.addVoteLike(id: image.id ?? "", urlImage: image.url ?? "", voteLike: true)
         default:
             print("No hice nada")
         }

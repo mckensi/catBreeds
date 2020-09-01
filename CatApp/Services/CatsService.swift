@@ -74,4 +74,21 @@ class CatsService {
               }
           }
       }
+    
+    func addCatVote(id: String, url: String, voteLike: Bool, responseValue: @escaping () -> Void,  onFailure: (() -> Void)? = nil){
+         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let newImageVote = CatImages(context: context)
+        newImageVote.id = id
+        newImageVote.urlImage = url
+        newImageVote.voteLike = voteLike
+        
+         do {
+             try context.save()
+             responseValue()
+         }
+         catch{
+             print("Error al añadir Colaborador")
+             onFailure?()
+         }
+     }
 }

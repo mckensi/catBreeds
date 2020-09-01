@@ -12,6 +12,7 @@ class CatsViewModel{
     private let catsManager = CatsManager.get
     
     var imagesCatsRes: (([ImageBreedRes]) -> Void)?
+    var addVote: (() -> Void)?
     
     var onFailure: (() -> Void)?
     
@@ -20,4 +21,10 @@ class CatsViewModel{
             catsManager.getImageCats(page: page, responseValue: responseValue, onFailure: onFailure)
         }
     }
+    
+    func addVoteLike(id: String, urlImage: String, voteLike: Bool){
+          if let responseValue = addVote{
+              catsManager.addNewVote(id: id, urlImage: urlImage, voteLike: voteLike, responseValue: responseValue, onFailure: onFailure)
+          }
+      }
 }

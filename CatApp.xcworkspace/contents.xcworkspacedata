@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:CatImages+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:CatImages+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:CatApp.xcodeproj">
    </FileRef>
    <FileRef
