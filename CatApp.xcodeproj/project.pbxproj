@@ -34,6 +34,7 @@
 		04F4D30024FDB24600F42B80 /* CatsDetailInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F4D2FE24FDB24600F42B80 /* CatsDetailInfoTableViewCell.xib */; };
 		04F4D30424FDBDD200F42B80 /* WebInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D30224FDBDD200F42B80 /* WebInfoViewController.swift */; };
 		04F4D30524FDBDD200F42B80 /* WebInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F4D30324FDBDD200F42B80 /* WebInfoViewController.xib */; };
+		04F4D30724FDC5BC00F42B80 /* CatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D30624FDC5BC00F42B80 /* CatsViewModel.swift */; };
 		3D45BB305A00F071C605E654 /* Pods_CatAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE187A500833438DC6926D7A /* Pods_CatAppTests.framework */; };
 		77A4CFA629C249FF980212E3 /* Pods_CatApp_CatAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9E0978CADEF5681ACEFCBF /* Pods_CatApp_CatAppUITests.framework */; };
 		9E9D28A7C2C2CC74157F6F70 /* Pods_CatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3359C45C8D6658B126C6276B /* Pods_CatApp.framework */; };
@@ -90,6 +91,7 @@
 		04F4D2FE24FDB24600F42B80 /* CatsDetailInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatsDetailInfoTableViewCell.xib; sourceTree = "<group>"; };
 		04F4D30224FDBDD200F42B80 /* WebInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebInfoViewController.swift; sourceTree = "<group>"; };
 		04F4D30324FDBDD200F42B80 /* WebInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebInfoViewController.xib; sourceTree = "<group>"; };
+		04F4D30624FDC5BC00F42B80 /* CatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsViewModel.swift; sourceTree = "<group>"; };
 		3359C45C8D6658B126C6276B /* Pods_CatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3908FAE1F6CAFA3C095ABC98 /* Pods-CatApp-CatAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatApp-CatAppUITests.release.xcconfig"; path = "Target Support Files/Pods-CatApp-CatAppUITests/Pods-CatApp-CatAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		90D576FD6EE3A4F254E560BC /* Pods-CatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatApp.debug.xcconfig"; path = "Target Support Files/Pods-CatApp/Pods-CatApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			children = (
 				04F4D2E624FD97FC00F42B80 /* BreedsViewModel.swift */,
 				04F4D2EF24FDA37900F42B80 /* BreedDetailViewModel.swift */,
+				04F4D30624FDC5BC00F42B80 /* CatsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 				04F4D30424FDBDD200F42B80 /* WebInfoViewController.swift in Sources */,
 				04F4D2F324FDA44D00F42B80 /* BreedDetailViewController.swift in Sources */,
 				04F4D2E124FD92F500F42B80 /* CatsApi.swift in Sources */,
+				04F4D30724FDC5BC00F42B80 /* CatsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,7 +698,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -748,7 +752,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

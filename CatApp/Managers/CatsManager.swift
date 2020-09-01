@@ -20,4 +20,8 @@ class CatsManager: NSObject {
     func getImageCatBreed(id: String, responseValue: @escaping ([ImageBreedRes]) -> Void, onFailure: (() -> Void)? = nil){
         catsService.getImageCatByBreed(id: id, responseValue: responseValue, onFailure: onFailure)
     }
+    
+    func getImageCats(page: Int, responseValue: @escaping ([ImageBreedRes]) -> Void, onFailure: (() -> Void)? = nil){
+        catsService.getImageCats(page: page, responseValue: responseValue, onFailure: onFailure)
+    }
 }

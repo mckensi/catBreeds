@@ -12,6 +12,7 @@ target 'CatApp' do
   pod 'Kingfisher'
   pod 'NotificationBannerSwift'
   pod 'IQKeyboardManagerSwift'
+  pod "Koloda"
 
   target 'CatAppTests' do
     inherit! :search_paths
