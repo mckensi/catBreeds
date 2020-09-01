@@ -11,6 +11,7 @@ import XCTest
 
 class CatAppTests: XCTestCase {
 
+    let viewModel = BreedsViewModel()
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -29,6 +30,21 @@ class CatAppTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func testGetBreend() throws {
+        let expectation = self.expectation(description: "Get BReeds")
+        viewModel.listBreedsCatsRes = { response in
+            XCTAssertNotNil(response)
+            expectation.fulfill()
+        }
+        
+        viewModel.onFailure = {
+            XCTFail()
+        }
+        viewModel.getBreedsCats(page: 0)
+        
+        self.waitForExpectations(timeout: 10, handler: nil)
     }
 
 }
