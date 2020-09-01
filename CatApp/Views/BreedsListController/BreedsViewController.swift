@@ -17,12 +17,15 @@ class BreedsViewController: UIViewController {
     private var viewModel = BreedsViewModel()
     
     private var breeds : [BreedRes]?
+    
+    private var currentPage : Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTable()
         initListeners()
         SVProgressHUD.show()
-        viewModel.getBreedsCats()
+        viewModel.getBreedsCats(page: currentPage)
         // Do any additional setup after loading the view.
     }
     
@@ -36,8 +39,12 @@ class BreedsViewController: UIViewController {
     private func initListeners(){
         viewModel.listBreedsCatsRes = { [weak self] breeds in
             guard let strongSelf = self else{return}
-            strongSelf.breeds = breeds
-            
+            if strongSelf.currentPage != 0 {
+                strongSelf.breeds?.append(contentsOf: breeds)
+            }else{
+                strongSelf.breeds = breeds
+            }
+           
             DispatchQueue.main.async {
                 strongSelf.tableView.reloadData()
                 SVProgressHUD.dismiss()
@@ -71,5 +78,14 @@ extension BreedsViewController : UITableViewDataSource{
         return cell ?? UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        guard let numberLimit = breeds?.count else {return}
+        if indexPath.row == numberLimit - 3{
+            currentPage = currentPage + 1
+            SVProgressHUD.show()
+            viewModel.getBreedsCats(page: currentPage)
+        }
+    }
     
 }

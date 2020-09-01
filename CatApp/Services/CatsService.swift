@@ -14,10 +14,15 @@ class CatsService {
     public static let get = CatsService()
     public init() {}
     
-    func getCatBreeds(responseValue: @escaping ([BreedRes]) -> Void,  onFailure: (() -> Void)? = nil){
+    func getCatBreeds(page: Int, responseValue: @escaping ([BreedRes]) -> Void,  onFailure: (() -> Void)? = nil){
         let url = CatsApi.breedUrl
+        let pageString = "\(page)"
+        let params = [
+            "page": pageString,
+            "limit": "20"
+        ]
         
-        ApiAdapter.get.requestGeneric(url: url) { (response:  AFDataResponse<[BreedRes]>) in
+        ApiAdapter.get.requestGeneric(url: url, queryParams: params) { (response:  AFDataResponse<[BreedRes]>) in
             if let statusCode = response.response?.statusCode{
                 switch statusCode {
                 case 200:

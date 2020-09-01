@@ -13,8 +13,8 @@ class CatsManager: NSObject {
     
     private let catsService = CatsService.get
     
-    func getCatBreeds(responseValue: @escaping ([BreedRes]) -> Void, onFailure: (() -> Void)? = nil){
-        catsService.getCatBreeds(responseValue: responseValue, onFailure: onFailure)
+    func getCatBreeds(page: Int, responseValue: @escaping ([BreedRes]) -> Void, onFailure: (() -> Void)? = nil){
+        catsService.getCatBreeds(page: page, responseValue: responseValue, onFailure: onFailure)
     }
     
     func getImageCatBreed(id: String, responseValue: @escaping ([ImageBreedRes]) -> Void, onFailure: (() -> Void)? = nil){

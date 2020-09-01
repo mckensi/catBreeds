@@ -15,9 +15,9 @@ class BreedsViewModel{
     
     var onFailure: (() -> Void)?
     
-    func getBreedsCats(){
+    func getBreedsCats(page: Int){
         if let responseValue = listBreedsCatsRes{
-            catsManager.getCatBreeds(responseValue: responseValue, onFailure: onFailure)
+            catsManager.getCatBreeds(page: page, responseValue: responseValue, onFailure: onFailure)
         }
     }
 }
