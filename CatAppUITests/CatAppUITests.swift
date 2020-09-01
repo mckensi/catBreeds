@@ -40,4 +40,20 @@ class CatAppUITests: XCTestCase {
             }
         }
     }
+    
+    func testSearchBreedByName() throws {
+        
+        let app = XCUIApplication()
+        app.launch()
+        app.tabBars.children(matching: .button).matching(identifier: "Item").element(boundBy: 1).tap()
+        let searchField = app.searchFields["Search by breed name"]
+        searchField.tap()
+        searchField.typeText("Ameri")
+        app.buttons["search"].tap()
+        
+        app.tables/*@START_MENU_TOKEN@*/.staticTexts["American Bobtail"]/*[[".cells.staticTexts[\"American Bobtail\"]",".staticTexts[\"American Bobtail\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 0).children(matching: .button).element.tap()
+        
+        
+    }
 }
