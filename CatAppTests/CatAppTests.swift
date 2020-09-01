@@ -33,7 +33,7 @@ class CatAppTests: XCTestCase {
     }
     
     func testGetBreend() throws {
-        let expectation = self.expectation(description: "Get BReeds")
+        let expectation = self.expectation(description: "Get Breeds")
         viewModel.listBreedsCatsRes = { response in
             XCTAssertNotNil(response)
             expectation.fulfill()
@@ -46,5 +46,21 @@ class CatAppTests: XCTestCase {
         
         self.waitForExpectations(timeout: 10, handler: nil)
     }
+    
+    func testGetBreendByName() throws {
+          let expectation = self.expectation(description: "Get Breeds by name")
+          viewModel.listBreedsCatsByNameRes = { response in
+              XCTAssertNotNil(response)
+              expectation.fulfill()
+          }
+          
+          viewModel.onFailure = {
+              XCTFail()
+          }
+        
+          viewModel.getBreedsCatsByName(textSearch: "Ameri")
+          
+          self.waitForExpectations(timeout: 10, handler: nil)
+      }
 
 }
