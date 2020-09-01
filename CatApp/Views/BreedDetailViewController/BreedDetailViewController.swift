@@ -20,9 +20,12 @@ class BreedDetailViewController: UIViewController {
     
     
     @IBOutlet weak var imgMain: UIImageView!
+    @IBOutlet weak var btnMore: UIButton!
+    @IBOutlet weak var viewButtonContainer: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTable()
+        setUpButtonMore()
         initListener()
         getInfoBreed()
         
@@ -70,6 +73,14 @@ class BreedDetailViewController: UIViewController {
         }
     }
     
+    private func setUpButtonMore(){
+        viewButtonContainer.layer.cornerRadius = 8
+        viewButtonContainer.layer.shadowColor = UIColor.black.cgColor
+        viewButtonContainer.layer.shadowOpacity = 0.2
+        viewButtonContainer.layer.shadowOffset = .zero
+        viewButtonContainer.layer.shadowRadius = 1
+    }
+    
     private func setUpTable(){
         tableView.delegate = self
         tableView.dataSource = self
@@ -81,6 +92,8 @@ class BreedDetailViewController: UIViewController {
         tableView.register(nibCellWeight.self, forCellReuseIdentifier: "weightCell")
         
     }
+    
+    
     @IBAction func actionClose(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -107,23 +120,27 @@ extension BreedDetailViewController : UITableViewDataSource{
             let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell") as? CatsDetailInfoTableViewCell
             cell?.labelTitle.text = "Description"
             cell?.labelDescription.text = imageRes?.breeds?[0].breedListReDescription ?? ""
+            cell?.selectionStyle = .none
             return cell ?? UITableViewCell()
             
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell") as? CatsDetailInfoTableViewCell
             cell?.labelTitle.text = "Origen"
             cell?.labelDescription.text = imageRes?.breeds?[0].origin ?? ""
+            cell?.selectionStyle = .none
             return cell ?? UITableViewCell()
             
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell") as? CatsDetailInfoTableViewCell
             cell?.labelTitle.text = "Temperament"
             cell?.labelDescription.text = imageRes?.breeds?[0].temperament ?? ""
+            cell?.selectionStyle = .none
             return cell ?? UITableViewCell()
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: "weightCell") as? CatsWeightTableViewCell
             cell?.labelImperial.text = imageRes?.breeds?[0].weight?.imperial ?? ""
             cell?.labelMetric.text = imageRes?.breeds?[0].weight?.metric ?? ""
+            cell?.selectionStyle = .none
             return cell ?? UITableViewCell()
             
         default:
