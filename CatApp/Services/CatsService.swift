@@ -37,7 +37,7 @@ class CatsService {
     }
     
     func getCatBreedsByName(textSearch: String, responseValue: @escaping ([BreedRes]) -> Void,  onFailure: (() -> Void)? = nil){
-        let url = CatsApi.breedUrl
+        let url = CatsApi.breedSearchByName
         
         let params = [
             "q": textSearch

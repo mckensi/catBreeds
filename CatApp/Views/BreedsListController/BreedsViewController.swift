@@ -21,11 +21,12 @@ class BreedsViewController: UIViewController {
     
     private var currentPage : Int = 0
     
-    
+    private var isPaginationEnable: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTable()
+        setUpSearchBar()
         initListeners()
         SVProgressHUD.show()
         viewModel.getBreedsCats(page: currentPage)
@@ -54,6 +55,16 @@ class BreedsViewController: UIViewController {
                 strongSelf.breeds = breeds
             }
            
+            DispatchQueue.main.async {
+                strongSelf.tableView.reloadData()
+                SVProgressHUD.dismiss()
+            }
+        }
+        
+        viewModel.listBreedsCatsByNameRes = { [weak self] breeds in
+            guard let strongSelf = self else{return}
+            strongSelf.breeds = breeds
+            
             DispatchQueue.main.async {
                 strongSelf.tableView.reloadData()
                 SVProgressHUD.dismiss()
@@ -90,12 +101,15 @@ extension BreedsViewController : UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
+
         guard let numberLimit = breeds?.count else {return}
-        if indexPath.row == numberLimit - 3{
-            currentPage = currentPage + 1
-            viewModel.getBreedsCats(page: currentPage)
+        if isPaginationEnable{
+            if indexPath.row == numberLimit - 3{
+                currentPage = currentPage + 1
+                viewModel.getBreedsCats(page: currentPage)
+            }
         }
+        
     }
     
 }
@@ -103,18 +117,36 @@ extension BreedsViewController : UITableViewDataSource{
 extension BreedsViewController : UISearchBarDelegate{
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = true
+        isPaginationEnable = false
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
+        if(searchBar.text == ""){
+            isPaginationEnable = true
+        }
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
         searchBar.endEditing(true)
+        
+        if(searchBar.text == ""){
+            isPaginationEnable = true
+            currentPage = 0
+            viewModel.getBreedsCats(page: currentPage)
+        }
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let textToSearch = searchBar.text ?? ""
+        SVProgressHUD.show()
+        if textToSearch == ""{
+            currentPage = 0
+            viewModel.getBreedsCats(page: currentPage)
+        }else{
+            viewModel.getBreedsCatsByName(textSearch: textToSearch)
+        }
 
     }
 }
