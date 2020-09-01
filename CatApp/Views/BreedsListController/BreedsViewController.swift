@@ -52,7 +52,9 @@ class BreedsViewController: UIViewController {
         }
         
         viewModel.onFailure = {
-            
+            let banner = NotificationBanner(title: "Error", subtitle: "Ocurrio un problema con tu busqueda, trabajamos para resolverlo.", style: .danger)
+            banner.backgroundColor = .systemYellow
+            banner.show()
         }
     }
     

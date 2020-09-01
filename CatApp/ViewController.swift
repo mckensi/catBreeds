@@ -10,6 +10,7 @@ import UIKit
 import Koloda
 import Kingfisher
 import SVProgressHUD
+import NotificationBannerSwift
 
 class ViewController: UIViewController {
     
@@ -55,6 +56,9 @@ class ViewController: UIViewController {
         }
         
         viewModel.onFailure = {
+            let banner = NotificationBanner(title: "Error", subtitle: "Ocurrio un problema con tu busqueda, trabajamos para resolverlo.", style: .danger)
+            banner.backgroundColor = .systemYellow
+            banner.show()
             SVProgressHUD.dismiss()
         }
     }
@@ -64,9 +68,9 @@ extension ViewController: KolodaViewDelegate {
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
         koloda.reloadData()
     }
-
+    
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-   
+        
     }
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
@@ -86,27 +90,27 @@ extension ViewController: KolodaViewDelegate {
 
 
 extension ViewController: KolodaViewDataSource {
-
+    
     func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
         return imageCats?.count ?? 0
     }
-
+    
     func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
         return .fast
     }
-
+    
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let imageView = UIImageView()
         if let count = imageCats?.count, count > 0{
             if let url = URL(string: imageCats?[index] ?? ""){
-                     imageView.kf.setImage(with: url)
-                }
-               
+                imageView.kf.setImage(with: url)
+            }
+            
         }
-    
+        
         return imageView
     }
-
+    
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
         return OverlayView()
     }

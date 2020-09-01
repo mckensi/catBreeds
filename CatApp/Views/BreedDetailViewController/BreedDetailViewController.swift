@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 import SVProgressHUD
+import NotificationBannerSwift
 
 class BreedDetailViewController: UIViewController {
     
@@ -24,7 +25,7 @@ class BreedDetailViewController: UIViewController {
         setUpTable()
         initListener()
         getInfoBreed()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -50,9 +51,15 @@ class BreedDetailViewController: UIViewController {
                     if let url = URL(string: strongSelf.imageRes?.url ?? "") {
                         strongSelf.imgMain?.kf.setImage(with: url)
                     }
-
+                    
                 }
             }
+        }
+        
+        viewModel.onFailure = {
+            let banner = NotificationBanner(title: "Error", subtitle: "Ocurrio un problema con tu busqueda, trabajamos para resolverlo.", style: .danger)
+            banner.backgroundColor = .systemYellow
+            banner.show()
         }
     }
     
