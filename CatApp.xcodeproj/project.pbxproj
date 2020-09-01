@@ -35,6 +35,8 @@
 		04F4D30424FDBDD200F42B80 /* WebInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D30224FDBDD200F42B80 /* WebInfoViewController.swift */; };
 		04F4D30524FDBDD200F42B80 /* WebInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F4D30324FDBDD200F42B80 /* WebInfoViewController.xib */; };
 		04F4D30724FDC5BC00F42B80 /* CatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D30624FDC5BC00F42B80 /* CatsViewModel.swift */; };
+		04F4D31724FF00EB00F42B80 /* CatsWeightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4D31524FF00EB00F42B80 /* CatsWeightTableViewCell.swift */; };
+		04F4D31824FF00EB00F42B80 /* CatsWeightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F4D31624FF00EB00F42B80 /* CatsWeightTableViewCell.xib */; };
 		3D45BB305A00F071C605E654 /* Pods_CatAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE187A500833438DC6926D7A /* Pods_CatAppTests.framework */; };
 		77A4CFA629C249FF980212E3 /* Pods_CatApp_CatAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9E0978CADEF5681ACEFCBF /* Pods_CatApp_CatAppUITests.framework */; };
 		9E9D28A7C2C2CC74157F6F70 /* Pods_CatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3359C45C8D6658B126C6276B /* Pods_CatApp.framework */; };
@@ -92,6 +94,8 @@
 		04F4D30224FDBDD200F42B80 /* WebInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebInfoViewController.swift; sourceTree = "<group>"; };
 		04F4D30324FDBDD200F42B80 /* WebInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebInfoViewController.xib; sourceTree = "<group>"; };
 		04F4D30624FDC5BC00F42B80 /* CatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsViewModel.swift; sourceTree = "<group>"; };
+		04F4D31524FF00EB00F42B80 /* CatsWeightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsWeightTableViewCell.swift; sourceTree = "<group>"; };
+		04F4D31624FF00EB00F42B80 /* CatsWeightTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatsWeightTableViewCell.xib; sourceTree = "<group>"; };
 		3359C45C8D6658B126C6276B /* Pods_CatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3908FAE1F6CAFA3C095ABC98 /* Pods-CatApp-CatAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatApp-CatAppUITests.release.xcconfig"; path = "Target Support Files/Pods-CatApp-CatAppUITests/Pods-CatApp-CatAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		90D576FD6EE3A4F254E560BC /* Pods-CatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatApp.debug.xcconfig"; path = "Target Support Files/Pods-CatApp/Pods-CatApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 		04F4D2E824FD998900F42B80 /* TableViews */ = {
 			isa = PBXGroup;
 			children = (
+				04F4D31424FF00BF00F42B80 /* WeightCell */,
 				04F4D2F824FDA6D100F42B80 /* CatsDetailInfoCell */,
 				04F4D2F724FDA6BA00F42B80 /* BreedsCell */,
 			);
@@ -307,6 +312,15 @@
 				04F4D30324FDBDD200F42B80 /* WebInfoViewController.xib */,
 			);
 			path = WebInfoController;
+			sourceTree = "<group>";
+		};
+		04F4D31424FF00BF00F42B80 /* WeightCell */ = {
+			isa = PBXGroup;
+			children = (
+				04F4D31524FF00EB00F42B80 /* CatsWeightTableViewCell.swift */,
+				04F4D31624FF00EB00F42B80 /* CatsWeightTableViewCell.xib */,
+			);
+			path = WeightCell;
 			sourceTree = "<group>";
 		};
 		20E61AEC29213BE6E0613023 /* Pods */ = {
@@ -443,6 +457,7 @@
 			files = (
 				04F4D2EC24FD99C900F42B80 /* BreedsTableViewCell.xib in Resources */,
 				04F4D2AE24FD898300F42B80 /* LaunchScreen.storyboard in Resources */,
+				04F4D31824FF00EB00F42B80 /* CatsWeightTableViewCell.xib in Resources */,
 				04F4D2F424FDA44D00F42B80 /* BreedDetailViewController.xib in Resources */,
 				04F4D2AB24FD898300F42B80 /* Assets.xcassets in Resources */,
 				04F4D30524FDBDD200F42B80 /* WebInfoViewController.xib in Resources */,
@@ -589,6 +604,7 @@
 				04F4D2A124FD897B00F42B80 /* SceneDelegate.swift in Sources */,
 				04F4D2DF24FD92BA00F42B80 /* ApiAdapter.swift in Sources */,
 				04F4D2FF24FDB24600F42B80 /* CatsDetailInfoTableViewCell.swift in Sources */,
+				04F4D31724FF00EB00F42B80 /* CatsWeightTableViewCell.swift in Sources */,
 				04F4D2DB24FD928900F42B80 /* Extensions.swift in Sources */,
 				04F4D30424FDBDD200F42B80 /* WebInfoViewController.swift in Sources */,
 				04F4D2F324FDA44D00F42B80 /* BreedDetailViewController.swift in Sources */,

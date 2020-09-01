@@ -75,6 +75,11 @@ class BreedDetailViewController: UIViewController {
         tableView.dataSource = self
         let nibCell = UINib(nibName: "CatsDetailInfoTableViewCell", bundle: nil)
         tableView.register(nibCell.self, forCellReuseIdentifier: "infoCell")
+        
+        
+        let nibCellWeight = UINib(nibName: "CatsWeightTableViewCell", bundle: nil)
+        tableView.register(nibCellWeight.self, forCellReuseIdentifier: "weightCell")
+        
     }
     @IBAction func actionClose(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -93,7 +98,7 @@ extension BreedDetailViewController : UITableViewDelegate{
 
 extension BreedDetailViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -103,6 +108,24 @@ extension BreedDetailViewController : UITableViewDataSource{
             cell?.labelTitle.text = "Description"
             cell?.labelDescription.text = imageRes?.breeds?[0].breedListReDescription ?? ""
             return cell ?? UITableViewCell()
+            
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell") as? CatsDetailInfoTableViewCell
+            cell?.labelTitle.text = "Origen"
+            cell?.labelDescription.text = imageRes?.breeds?[0].origin ?? ""
+            return cell ?? UITableViewCell()
+            
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell") as? CatsDetailInfoTableViewCell
+            cell?.labelTitle.text = "Temperament"
+            cell?.labelDescription.text = imageRes?.breeds?[0].temperament ?? ""
+            return cell ?? UITableViewCell()
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "weightCell") as? CatsWeightTableViewCell
+            cell?.labelImperial.text = imageRes?.breeds?[0].weight?.imperial ?? ""
+            cell?.labelMetric.text = imageRes?.breeds?[0].weight?.metric ?? ""
+            return cell ?? UITableViewCell()
+            
         default:
             return UITableViewCell()
         }
