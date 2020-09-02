@@ -24,8 +24,8 @@ class ApiAdapter {
     }
     
     func requestGeneric<T: Decodable>(url: String, method: Alamofire.HTTPMethod = .get,
-                                        queryParams: [String: String] = [:], body: Parameters? = nil,
-                                        headers: HTTPHeaders? = nil, completionHandler: @escaping (AFDataResponse<T>) -> Void) {
+                                      queryParams: [String: String] = [:], body: Parameters? = nil,
+                                      headers: HTTPHeaders? = nil, completionHandler: @escaping (AFDataResponse<T>) -> Void) {
         var urlComponent = URLComponents(string: url)!
         if queryParams.count > 0 {
             let queryItems = queryParams.map { URLQueryItem(name: $0.key, value: $0.value) }

@@ -10,7 +10,8 @@ import UIKit
 import WebKit
 
 class WebInfoViewController: UIViewController {
-
+    
+    //MARK: IBOutlets
     @IBOutlet weak var webView: WKWebView!
     
     var url: String?
@@ -25,12 +26,12 @@ class WebInfoViewController: UIViewController {
     }
     
     init(){
-           super.init(nibName: "WebInfoViewController", bundle: nil)
-           
-       }
-       
-       required init?(coder: NSCoder) {
-           fatalError("init(coder:) has not been implemented")
-       }
-
+        super.init(nibName: "WebInfoViewController", bundle: nil)
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }

@@ -11,17 +11,16 @@ import SVProgressHUD
 import NotificationBannerSwift
 
 class BreedsViewController: UIViewController {
-    @IBOutlet weak var searchBar: UISearchBar!
-    
-    @IBOutlet weak var tableView: UITableView!
-    
+  
     private var viewModel = BreedsViewModel()
-    
     private var breeds : [BreedRes]?
-    
     private var currentPage : Int = 0
-    
     private var isPaginationEnable: Bool = true
+    
+    //MARK: IBOutlets
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +45,8 @@ class BreedsViewController: UIViewController {
         searchBar.placeholder = "Search by breed name"
     }
     
+    //MARK: InitListeners
+    
     private func initListeners(){
         viewModel.listBreedsCatsRes = { [weak self] breeds in
             guard let strongSelf = self else{return}
@@ -54,7 +55,7 @@ class BreedsViewController: UIViewController {
             }else{
                 strongSelf.breeds = breeds
             }
-           
+            
             DispatchQueue.main.async {
                 strongSelf.tableView.reloadData()
                 SVProgressHUD.dismiss()
@@ -80,6 +81,8 @@ class BreedsViewController: UIViewController {
     
 }
 
+//MARK: Extensions and protocols
+
 extension BreedsViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = BreedDetailViewController()
@@ -101,7 +104,7 @@ extension BreedsViewController : UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-
+        
         guard let numberLimit = breeds?.count else {return}
         if isPaginationEnable{
             if indexPath.row == numberLimit - 3{
@@ -147,6 +150,6 @@ extension BreedsViewController : UISearchBarDelegate{
         }else{
             viewModel.getBreedsCatsByName(textSearch: textToSearch)
         }
-
+        
     }
 }

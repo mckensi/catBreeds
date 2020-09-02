@@ -13,7 +13,6 @@ class BreedsViewModel{
     
     var listBreedsCatsRes: (([BreedRes]) -> Void)?
     var listBreedsCatsByNameRes: (([BreedRes]) -> Void)?
-    
     var onFailure: (() -> Void)?
     
     func getBreedsCats(page: Int){
@@ -23,8 +22,8 @@ class BreedsViewModel{
     }
     
     func getBreedsCatsByName(textSearch: String){
-           if let responseValue = listBreedsCatsByNameRes{
-               catsManager.getCatBreedsByName(textSearch: textSearch, responseValue: responseValue, onFailure: onFailure)
-           }
-       }
+        if let responseValue = listBreedsCatsByNameRes{
+            catsManager.getCatBreedsByName(textSearch: textSearch, responseValue: responseValue, onFailure: onFailure)
+        }
+    }
 }

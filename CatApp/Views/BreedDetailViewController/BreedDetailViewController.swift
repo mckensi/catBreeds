@@ -13,15 +13,16 @@ import NotificationBannerSwift
 
 class BreedDetailViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
     var idBreed : String?
     private var imageRes : ImageBreedRes?
     private var viewModel = BreedDetailViewModel()
     
-    
+    //MARK: IBOutlets
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imgMain: UIImageView!
     @IBOutlet weak var btnMore: UIButton!
     @IBOutlet weak var viewButtonContainer: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTable()
@@ -32,7 +33,6 @@ class BreedDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
     init(){
         super.init(nibName: "BreedDetailViewController", bundle: nil)
         
@@ -41,6 +41,8 @@ class BreedDetailViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: InitListeners
     
     private func initListener(){
         viewModel.imageBreedRes = { [weak self] response in
@@ -93,6 +95,7 @@ class BreedDetailViewController: UIViewController {
         
     }
     
+    //MARK: Actions
     
     @IBAction func actionClose(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -104,6 +107,7 @@ class BreedDetailViewController: UIViewController {
     }
 }
 
+//MARK: Extensions and protocols
 
 extension BreedDetailViewController : UITableViewDelegate{
 }

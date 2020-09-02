@@ -10,9 +10,7 @@ import Foundation
 
 struct CatsApi {
     
-    private init() {
-        
-    }
+    private init() {}
     
     static let baseUrl = "https://api.thecatapi.com/v1/"
     

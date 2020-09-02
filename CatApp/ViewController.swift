@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     private var imageCatsRes : [ImageBreedRes]?
     private var viewModel = CatsViewModel()
     
+    //MARK: IBOutlets
     @IBOutlet weak var kolodaView: KolodaView!
     
     
@@ -32,6 +33,8 @@ class ViewController: UIViewController {
         viewModel.getBreedsCats(page: 0)
         
     }
+    
+    //MARK: InitListeners
     
     private func initListener(){
         viewModel.imagesCatsRes = { [weak self] response in
@@ -63,6 +66,8 @@ class ViewController: UIViewController {
         }
     }
 }
+
+//MARK: Extensions and protocols
 
 extension ViewController: KolodaViewDelegate {
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {

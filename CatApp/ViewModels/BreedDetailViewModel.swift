@@ -13,7 +13,6 @@ class BreedDetailViewModel{
     private let catsManager = CatsManager.get
     
     var imageBreedRes: (([ImageBreedRes]) -> Void)?
-    
     var onFailure: (() -> Void)?
     
     func getBreedsCats(id: String){
