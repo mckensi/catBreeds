@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CatApp" sceneMemberID="viewController">
@@ -53,7 +53,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="house" catalog="system" id="sYy-ob-hs7"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="sYy-ob-hs7"/>
                     <connections>
                         <outlet property="kolodaView" destination="JV9-XK-8x9" id="Qlo-oX-DaB"/>
                     </connections>
@@ -62,7 +62,7 @@
             </objects>
             <point key="canvasLocation" x="1122" y="-52"/>
         </scene>
-        <!--Item-->
+        <!--Breeds-->
         <scene sceneID="4BZ-U8-wdg">
             <objects>
                 <viewController id="Mda-KI-jff" customClass="BreedsViewController" customModule="CatApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,7 +91,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1ha-yM-817"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="doc.text.fill" catalog="system" id="azI-py-GWm"/>
+                    <tabBarItem key="tabBarItem" title="Breeds" image="doc.text.fill" catalog="system" id="azI-py-GWm"/>
                     <connections>
                         <outlet property="searchBar" destination="6TG-Ri-FAe" id="9qu-0w-qLr"/>
                         <outlet property="tableView" destination="uQP-OL-IMW" id="G84-PF-8Ng"/>
