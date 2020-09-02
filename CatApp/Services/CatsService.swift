@@ -19,7 +19,7 @@ class CatsService {
         let pageString = "\(page)"
         let params = [
             "page": pageString,
-            "limit": "20"
+            "limit": "40"
         ]
         
         ApiAdapter.get.requestGeneric(url: url, queryParams: params) { (response:  AFDataResponse<[BreedRes]>) in
@@ -80,43 +80,43 @@ class CatsService {
     }
     
     func getImageCats(page: Int, responseValue: @escaping ([ImageBreedRes]) -> Void,  onFailure: (() -> Void)? = nil){
-        let url = CatsApi.imageByBreed
-        let pageString = "\(page)"
-        let params = [
-            "page": pageString,
-            "limit": "20"
-        ]
-        
-        ApiAdapter.get.requestGeneric(url: url, queryParams: params) { (response:  AFDataResponse<[ImageBreedRes]>) in
-            if let statusCode = response.response?.statusCode{
-                switch statusCode {
-                case 200:
-                    if let value = response.value{
-                        responseValue(value)
-                    }
-                default:
-                    onFailure?()
-                }
-            }
-        }
-    }
+          let url = CatsApi.imageByBreed
+          let pageString = "\(page)"
+          let params = [
+              "page": pageString,
+              "limit": "20"
+          ]
+          
+          ApiAdapter.get.requestGeneric(url: url, queryParams: params) { (response:  AFDataResponse<[ImageBreedRes]>) in
+              if let statusCode = response.response?.statusCode{
+                  switch statusCode {
+                  case 200:
+                      if let value = response.value{
+                          responseValue(value)
+                      }
+                  default:
+                      onFailure?()
+                  }
+              }
+          }
+      }
     
     func addCatVote(id: String, url: String, voteLike: Bool, responseValue: @escaping () -> Void,  onFailure: (() -> Void)? = nil){
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let newImageVote = CatImages(context: context)
         newImageVote.id = id
         newImageVote.urlImage = url
         newImageVote.voteLike = voteLike
         
-        do {
-            try context.save()
-            responseValue()
-        }
-        catch{
-            print("Error al añadir Colaborador")
-            onFailure?()
-        }
-    }
+         do {
+             try context.save()
+             responseValue()
+         }
+         catch{
+             print("Error al añadir Colaborador")
+             onFailure?()
+         }
+     }
     
-    
+
 }
