@@ -23,10 +23,12 @@ class BreedDetailViewController: UIViewController {
     @IBOutlet weak var btnMore: UIButton!
     @IBOutlet weak var viewButtonContainer: UIView!
     
+    @IBOutlet weak var imgButtonCloseContainer: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTable()
         setUpButtonMore()
+        setUpCloseView()
         initListener()
         getInfoBreed()
         
@@ -81,6 +83,14 @@ class BreedDetailViewController: UIViewController {
         viewButtonContainer.layer.shadowOpacity = 0.2
         viewButtonContainer.layer.shadowOffset = .zero
         viewButtonContainer.layer.shadowRadius = 1
+    }
+    
+    private func setUpCloseView(){
+        imgButtonCloseContainer.layer.cornerRadius = imgButtonCloseContainer.frame.width / 2
+        imgButtonCloseContainer.layer.shadowColor = UIColor.black.cgColor
+        imgButtonCloseContainer.layer.shadowOpacity = 0.2
+        imgButtonCloseContainer.layer.shadowOffset = .zero
+        imgButtonCloseContainer.layer.shadowRadius = 1
     }
     
     private func setUpTable(){

@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BreedDetailViewController" customModule="CatApp" customModuleProvider="target">
             <connections>
                 <outlet property="btnMore" destination="MHO-Kl-OFZ" id="pgD-Qs-l7U"/>
+                <outlet property="imgButtonCloseContainer" destination="BtC-Dg-7UY" id="UBi-jV-Kpk"/>
                 <outlet property="imgMain" destination="bZP-97-sPx" id="FBn-ua-vJB"/>
                 <outlet property="tableView" destination="13a-jU-ZEi" id="HDb-eW-ohZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -37,6 +38,7 @@
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2VC-xy-zb3">
                             <rect key="frame" x="0.0" y="0.5" width="30" height="29"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htq-V4-6vg">
@@ -44,6 +46,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="42"/>
                             <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             <state key="normal">
+                                <color key="titleColor" red="0.90098911520000002" green="0.30407688020000001" blue="0.40390679239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                             </state>
                             <connections>
@@ -51,7 +54,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                     <constraints>
                         <constraint firstItem="2VC-xy-zb3" firstAttribute="top" secondItem="BtC-Dg-7UY" secondAttribute="top" id="0qv-85-kIi"/>
                         <constraint firstAttribute="width" constant="30" id="1TY-ub-PNa"/>
